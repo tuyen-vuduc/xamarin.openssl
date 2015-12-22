@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kan.Touch", "Kan.Touch\Kan.Touch.csproj", "{11CD1B8A-6811-497E-8263-D2692C723C06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Debug-Produce|Any CPU = Debug-Produce|Any CPU
+		ReleaseDev|Any CPU = ReleaseDev|Any CPU
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Debug-Mock|Any CPU = Debug-Mock|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Debug|iPhone.Build.0 = Debug|iPhone
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Debug-Mock|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Debug-Mock|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Debug-Produce|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Debug-Produce|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Release|Any CPU.Build.0 = Release|iPhone
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Release|iPhone.ActiveCfg = Release|iPhone
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Release|iPhone.Build.0 = Release|iPhone
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.ReleaseDev|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{11CD1B8A-6811-497E-8263-D2692C723C06}.ReleaseDev|Any CPU.Build.0 = Debug|iPhoneSimulator
+	EndGlobalSection
+EndGlobal

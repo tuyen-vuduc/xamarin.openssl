@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{11CD1B8A-6811-497E-8263-D2692C723C06}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Kan.Touch</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Kan.Touch</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFastDev>true</MtouchFastDev>
+    <Commandlineparameters>-gcc_flags "-L${ProjectDir} -lMylibrary -force_load ${ProjectDir}/libcrypto.a"</Commandlineparameters>
+    <MtouchExtraArgs>-gcc_flags "-L${ProjectDir} -lCrypto -force_load ${ProjectDir}/libCrypto.a -lSsl -force_load ${ProjectDir}/libSsl.a"</MtouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchDebug>true</MtouchDebug>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="libCrypto.a" />
+    <None Include="libSsl.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Asn1DateTime.cs" />
+    <Compile Include="Core\Asn1Integer.cs" />
+    <Compile Include="Core\Asn1Object.cs" />
+    <Compile Include="Core\Asn1String.cs" />
+    <Compile Include="Core\Base.cs" />
+    <Compile Include="Core\BigNumber.cs" />
+    <Compile Include="Core\BIO.cs" />
+    <Compile Include="Core\Crypto.cs" />
+    <Compile Include="Core\MemoryTracker.cs" />
+    <Compile Include="Core\Native.cs" />
+    <Compile Include="Core\Objects.cs" />
+    <Compile Include="Core\OpenSslException.cs" />
+    <Compile Include="Core\Password.cs" />
+    <Compile Include="Core\Random.cs" />
+    <Compile Include="Core\Stack.cs" />
+    <Compile Include="Core\Version.cs" />
+    <Compile Include="Crypto\Cipher.cs" />
+    <Compile Include="Crypto\CryptoKey.cs" />
+    <Compile Include="Crypto\DH.cs" />
+    <Compile Include="Crypto\DSA.cs" />
+    <Compile Include="Crypto\EC\BuiltinCurve.cs" />
+    <Compile Include="Crypto\EC\DSASignature.cs" />
+    <Compile Include="Crypto\EC\Group.cs" />
+    <Compile Include="Crypto\EC\Key.cs" />
+    <Compile Include="Crypto\EC\Method.cs" />
+    <Compile Include="Crypto\EC\Point.cs" />
+    <Compile Include="Crypto\HMAC.cs" />
+    <Compile Include="Crypto\MessageDigest.cs" />
+    <Compile Include="Crypto\RSA.cs" />
+    <Compile Include="SSL\Enums.cs" />
+    <Compile Include="SSL\Ssl.cs" />
+    <Compile Include="SSL\SslCipher.cs" />
+    <Compile Include="SSL\SslContext.cs" />
+    <Compile Include="SSL\SslMethod.cs" />
+    <Compile Include="SSL\SslStream.cs" />
+    <Compile Include="SSL\SslStreamBase.cs" />
+    <Compile Include="SSL\SslStreamClient.cs" />
+    <Compile Include="SSL\SslStreamServer.cs" />
+    <Compile Include="X509\Configuration.cs" />
+    <Compile Include="X509\Identity.cs" />
+    <Compile Include="X509\PKCS12.cs" />
+    <Compile Include="X509\PKCS7.cs" />
+    <Compile Include="X509\VerifyResult.cs" />
+    <Compile Include="X509\X509Certificate.cs" />
+    <Compile Include="X509\X509CertificateAuthority.cs" />
+    <Compile Include="X509\X509CertificateInfo.cs" />
+    <Compile Include="X509\X509Chain.cs" />
+    <Compile Include="X509\X509Extension.cs" />
+    <Compile Include="X509\X509Name.cs" />
+    <Compile Include="X509\X509Object.cs" />
+    <Compile Include="X509\X509Request.cs" />
+    <Compile Include="X509\X509Store.cs" />
+    <Compile Include="X509\X509StoreContext.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Crypto\" />
+    <Folder Include="SSL\" />
+    <Folder Include="X509\" />
+  </ItemGroup>
+</Project>
